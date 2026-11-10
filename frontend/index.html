@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HR Saarathi AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================================================= -->
+    <!-- BACKGROUND -->
+    <!-- ================================================= -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- ================================================= -->
+    <!-- HEADER -->
+    <!-- ================================================= -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <span>HR</span>
+            </div>
+
+            <div>
+
+                <h1>HR Saarathi</h1>
+
+                <p>
+                    AI Attendance Assistant
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="connection">
+
+            <span class="connection-dot"></span>
+
+            <span id="connectionText">
+                Connecting...
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================================= -->
+    <!-- MAIN -->
+    <!-- ================================================= -->
+
+    <main class="main">
+
+
+        <!-- ============================================= -->
+        <!-- AI AREA -->
+        <!-- ============================================= -->
+
+        <section class="assistant-area">
+
+
+            <div
+                id="orb"
+                class="orb"
+            >
+
+                <div class="orb-inner"></div>
+
+                <div class="orb-ring ring-one"></div>
+                <div class="orb-ring ring-two"></div>
+                <div class="orb-ring ring-three"></div>
+
+            </div>
+
+
+            <div
+                id="statusText"
+                class="status-text"
+            >
+                I'm ready to help...
+            </div>
+
+
+            <div
+                id="subStatus"
+                class="sub-status"
+            >
+                Ask me about employee attendance
+            </div>
+
+
+            <!-- ========================================= -->
+            <!-- VOICE CONTROLS -->
+            <!-- ========================================= -->
+
+            <div class="voice-controls">
+
+
+                <button
+                    id="clearButton"
+                    class="control-button clear-button"
+                    title="Clear conversation"
+                >
+
+                    <span>×</span>
+
+                </button>
+
+
+                <button
+                    id="micButton"
+                    class="mic-button"
+                    title="Start speaking"
+                >
+
+                    <span
+                        id="micIcon"
+                        class="mic-icon"
+                    >
+                        🎙
+                    </span>
+
+                </button>
+
+
+                <button
+                    id="speakerButton"
+                    class="control-button speaker-button"
+                    title="Enable / disable voice response"
+                >
+
+                    <span id="speakerIcon">
+                        🔊
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ========================================= -->
+            <!-- RECORDING TIMER -->
+            <!-- ========================================= -->
+
+            <div
+                id="recordingTimer"
+                class="recording-timer"
+            >
+                00:00
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- CHAT / ANSWER -->
+        <!-- ================================================= -->
+
+        <section class="conversation-container">
+
+
+            <div
+                id="conversation"
+                class="conversation"
+            >
+
+                <!-- Messages will appear here -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- TEXT INPUT -->
+        <!-- ================================================= -->
+
+        <section class="input-area">
+
+
+            <form
+                id="questionForm"
+                class="question-form"
+            >
+
+
+                <input
+                    id="questionInput"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Ask your HR question..."
+                >
+
+
+                <button
+                    type="submit"
+                    id="sendButton"
+                    class="send-button"
+                >
+
+                    ➤
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- QUICK QUESTIONS -->
+        <!-- ================================================= -->
+
+        <section class="quick-questions">
+
+
+            <button
+                class="quick-question"
+                data-question="Who took leave this month?"
+            >
+                Who took leave this month?
+            </button>
+
+
+            <button
+                class="quick-question"
+                data-question="Who is absent today?"
+            >
+                Who is absent today?
+            </button>
+
+
+            <button
+                class="quick-question"
+                data-question="ഈ മാസം ആരൊക്കെയാണ് leave എടുത്തത്?"
+            >
+                ഈ മാസം ആരൊക്കെയാണ് leave എടുത്തത്?
+            </button>
+
+
+            <button
+                class="quick-question"
+                data-question="ഇന്ന് ആരൊക്കെയാണ് absent?"
+            >
+                ഇന്ന് ആരൊക്കെയാണ് absent?
+            </button>
+
+
+            <button
+                class="quick-question"
+                data-question="What is Anil's attendance percentage?"
+            >
+                Anil's attendance %
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer class="footer">
+
+        <span>
+            HR Saarathi AI
+        </span>
+
+        <span>
+            •
+        </span>
+
+        <span>
+            Malayalam / English
+        </span>
+
+        <span>
+            •
+        </span>
+
+        <span>
+            Voice Enabled
+        </span>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

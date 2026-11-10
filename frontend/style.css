@@ -1,0 +1,1181 @@
+/* =====================================================
+   HR SAARATHI AI
+   MAIN STYLES
+   ===================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        #020817;
+
+    color: white;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   APP
+   ===================================================== */
+
+.app {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(0, 110, 255, 0.16),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #020817,
+            #06122d 45%,
+            #020617
+        );
+
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+   ===================================================== */
+
+.background-glow {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    opacity: 0.35;
+
+}
+
+
+.glow-one {
+
+    width: 350px;
+
+    height: 350px;
+
+    background: #004cff;
+
+    top: -120px;
+
+    left: -100px;
+
+}
+
+
+.glow-two {
+
+    width: 400px;
+
+    height: 400px;
+
+    background: #00b7ff;
+
+    bottom: -180px;
+
+    right: -150px;
+
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+
+    width: 100%;
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 42px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.07);
+
+    background:
+        rgba(2, 8, 23, 0.55);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 10;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.brand-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(37,99,235,0.45);
+
+}
+
+
+.brand-icon span {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+.brand h1 {
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+}
+
+
+.brand p {
+
+    font-size: 11px;
+
+    color: #8ea0bd;
+
+    margin-top: 3px;
+
+}
+
+
+.connection {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+
+}
+
+
+.connection-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #64748b;
+
+    box-shadow: 0 0 8px currentColor;
+
+}
+
+
+.connection.connected .connection-dot {
+
+    background: #22c55e;
+
+    color: #22c55e;
+
+}
+
+
+.connection.error .connection-dot {
+
+    background: #ef4444;
+
+    color: #ef4444;
+
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+.main {
+
+    flex: 1;
+
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding:
+        45px 25px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =====================================================
+   ASSISTANT AREA
+   ===================================================== */
+
+.assistant-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 370px;
+
+}
+
+
+/* =====================================================
+   ORB
+   ===================================================== */
+
+.orb {
+
+    width: 145px;
+
+    height: 145px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.orb:hover {
+
+    transform:
+        scale(1.04);
+
+}
+
+
+.orb-inner {
+
+    width: 112px;
+
+    height: 112px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    z-index: 5;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 25%,
+            #22d3ee,
+            #2563eb 38%,
+            #4f46e5 65%,
+            #020617 100%
+        );
+
+    box-shadow:
+
+        0 0 20px
+        rgba(37,99,235,0.8),
+
+        0 0 60px
+        rgba(6,182,212,0.35),
+
+        inset -15px -20px 30px
+        rgba(0,0,0,0.45);
+
+}
+
+
+.orb-ring {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(56,189,248,0.25);
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.ring-one {
+
+    width: 132px;
+
+    height: 132px;
+
+}
+
+
+.ring-two {
+
+    width: 158px;
+
+    height: 158px;
+
+}
+
+
+.ring-three {
+
+    width: 185px;
+
+    height: 185px;
+
+    border-color:
+        rgba(59,130,246,0.12);
+
+}
+
+
+/* =====================================================
+   LISTENING ANIMATION
+   ===================================================== */
+
+.orb.listening {
+
+    animation:
+        orbPulse 1.3s infinite ease-in-out;
+
+}
+
+
+.orb.listening .orb-inner {
+
+    box-shadow:
+
+        0 0 30px
+        rgba(34,211,238,0.9),
+
+        0 0 90px
+        rgba(37,99,235,0.7),
+
+        inset -15px -20px 30px
+        rgba(0,0,0,0.4);
+
+}
+
+
+.orb.listening .ring-one {
+
+    animation:
+        ringPulse 1.2s infinite;
+
+}
+
+
+.orb.listening .ring-two {
+
+    animation:
+        ringPulse 1.6s infinite;
+
+}
+
+
+@keyframes orbPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+@keyframes ringPulse {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(0.9);
+
+        opacity: 0.2;
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.08);
+
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.2);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.status-text {
+
+    margin-top: 34px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    color: #f8fafc;
+
+}
+
+
+.sub-status {
+
+    margin-top: 7px;
+
+    font-size: 13px;
+
+    color: #7183a3;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   VOICE CONTROLS
+   ===================================================== */
+
+.voice-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 25px;
+
+}
+
+
+.control-button,
+.mic-button {
+
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.control-button {
+
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 50%;
+
+    color: #b8c6dc;
+
+    background:
+        rgba(51,65,85,0.65);
+
+    border:
+        1px solid
+        rgba(148,163,184,0.12);
+
+}
+
+
+.control-button:hover {
+
+    background:
+        rgba(71,85,105,0.9);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.mic-button {
+
+    width: 59px;
+
+    height: 59px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #334155,
+            #1e3a66
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.3);
+
+}
+
+
+.mic-button:hover {
+
+    transform:
+        scale(1.07);
+
+    box-shadow:
+        0 0 30px
+        rgba(37,99,235,0.45);
+
+}
+
+
+.mic-button.recording {
+
+    background:
+        linear-gradient(
+            135deg,
+            #dc2626,
+            #ef4444
+        );
+
+    animation:
+        micPulse 1.2s infinite;
+
+}
+
+
+@keyframes micPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(239,68,68,0.5);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 15px
+            rgba(239,68,68,0);
+    }
+
+}
+
+
+.mic-icon {
+
+    font-size: 20px;
+
+}
+
+
+.recording-timer {
+
+    display: none;
+
+    margin-top: 12px;
+
+    font-size: 12px;
+
+    color: #f87171;
+
+    font-family:
+        monospace;
+
+}
+
+
+.recording-timer.visible {
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   CONVERSATION
+   ===================================================== */
+
+.conversation-container {
+
+    width: 100%;
+
+}
+
+
+.conversation {
+
+    width: 100%;
+
+    max-height: 250px;
+
+    overflow-y: auto;
+
+    padding: 5px 5px 15px;
+
+}
+
+
+.conversation::-webkit-scrollbar {
+
+    width: 4px;
+
+}
+
+
+.conversation::-webkit-scrollbar-thumb {
+
+    background:
+        #334155;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   MESSAGE
+   ===================================================== */
+
+.message {
+
+    width: 100%;
+
+    display: flex;
+
+    margin-bottom: 14px;
+
+    animation:
+        messageIn 0.3s ease;
+
+}
+
+
+@keyframes messageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.message.user {
+
+    justify-content: flex-end;
+
+}
+
+
+.message.assistant {
+
+    justify-content: flex-start;
+
+}
+
+
+.message-bubble {
+
+    max-width: 75%;
+
+    padding: 12px 16px;
+
+    border-radius: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.message.user .message-bubble {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #2563eb
+        );
+
+    border-bottom-right-radius: 4px;
+
+}
+
+
+.message.assistant .message-bubble {
+
+    background:
+        rgba(15,23,42,0.8);
+
+    border:
+        1px solid
+        rgba(148,163,184,0.1);
+
+    border-bottom-left-radius: 4px;
+
+    color: #dbeafe;
+
+}
+
+
+/* =====================================================
+   INPUT
+   ===================================================== */
+
+.input-area {
+
+    width: 100%;
+
+    margin-top: 5px;
+
+}
+
+
+.question-form {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    height: 58px;
+
+    padding: 6px 7px 6px 20px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15,23,42,0.9);
+
+    border:
+        1px solid
+        rgba(148,163,184,0.14);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+
+}
+
+
+.question-form:focus-within {
+
+    border-color:
+        rgba(59,130,246,0.5);
+
+    box-shadow:
+        0 0 30px
+        rgba(37,99,235,0.12);
+
+}
+
+
+.question-form input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+
+.question-form input::placeholder {
+
+    color: #64748b;
+
+}
+
+
+.send-button {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    font-size: 19px;
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.send-button:hover {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.send-button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =====================================================
+   QUICK QUESTIONS
+   ===================================================== */
+
+.quick-questions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+
+.quick-question {
+
+    border:
+        1px solid
+        rgba(148,163,184,0.1);
+
+    background:
+        rgba(15,23,42,0.6);
+
+    color: #94a3b8;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+.quick-question:hover {
+
+    color: white;
+
+    border-color:
+        rgba(59,130,246,0.35);
+
+    background:
+        rgba(30,64,175,0.25);
+
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 18px;
+
+    color: #475569;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.loading {
+
+    display: inline-flex;
+
+    gap: 4px;
+
+}
+
+
+.loading span {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    animation:
+        loading 1s infinite;
+
+}
+
+
+.loading span:nth-child(2) {
+
+    animation-delay: 0.15s;
+
+}
+
+
+.loading span:nth-child(3) {
+
+    animation-delay: 0.3s;
+
+}
+
+
+@keyframes loading {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .header {
+
+        padding: 0 18px;
+
+    }
+
+
+    .main {
+
+        padding:
+            25px 15px 20px;
+
+    }
+
+
+    .assistant-area {
+
+        min-height: 330px;
+
+    }
+
+
+    .orb {
+
+        transform:
+            scale(0.9);
+
+    }
+
+
+    .status-text {
+
+        font-size: 16px;
+
+    }
+
+
+    .message-bubble {
+
+        max-width: 88%;
+
+    }
+
+
+    .quick-question {
+
+        font-size: 10px;
+
+    }
+
+}

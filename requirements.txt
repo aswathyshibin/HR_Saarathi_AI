@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+groq
+gspread
+google-auth
+pandas
+python-dotenv
+python-multipart
